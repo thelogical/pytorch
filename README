@@ -1,0 +1,14 @@
+ACTUAL.PY
+
+
+actual.py uses torch.nn module to train the agent using a small neural network to avoid pits and go to cells
+labeled as goals.
+different loss computation algorithms(line 52) and optmizer algorithms(line 56) produce different results.
+learning rate(line 54),activation function(line 49) and number of hidden layer nuerons(line 45 H) can be tweakedto get different results though the best results are with the values and algorithms already in the source code
+line 258 provides a format to save the weights and must be edited accordingly ifcommented out.
+rest are all drawing and moving functions to represent training graphically
+
+GAME.PY
+
+This source code uses q learning algorithm to train the agent on same board by initializing it randomly on board and and analysing history moves when agent endsup in one of the end states(goals or pits) it uses transition matrix to prevent agent from going out of board
+After training the weights are pickled to be used directly if required
